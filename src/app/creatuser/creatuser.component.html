@@ -1,0 +1,9 @@
+<form>
+  <h1>Create New</h1>
+  <button class="btn btn-warning" (click)="showlist()">list user</button><br>
+  <label >UserName:</label><br>
+  <input type="text" [(ngModel)]="user.userName" name="userName" ><br>
+  <label >passWord:</label><br>
+  <input type="text" [(ngModel)]="user.userPassword" name="userPassword"><br>
+  <input type="button" (click)="createUser()" value="Submit">
+</form>

@@ -1,0 +1,18 @@
+
+<button class="btn btn-danger" (click)="create()">create user</button><br>
+<table class="table table-striped">
+  <tr>
+    <th>id</th>
+    <th>userName</th>
+    <th>userPassword</th>
+  </tr>
+  <tr *ngFor="let info of users">
+    <td>{{info.userId}}</td>
+    <td>{{info.userName}}</td>
+    <td>{{info.userPassword}}</td>
+    <td>
+      <!-- <button type="button" class="btn btn-danger" (click)=deleteUser(infor.id)>Delete</button> -->
+      <button type="button" class="btn btn-danger" (click)="updateUser(info.userId)">update</button>
+    </td>
+  </tr>
+</table>
