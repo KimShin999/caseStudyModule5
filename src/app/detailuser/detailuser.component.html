@@ -1,0 +1,17 @@
+<button class="btn btn-danger" (click)="showlist()">List user</button><br>
+<table class="table table-striped">
+  <tr>
+    <th>id</th>
+    <th>userName</th>
+    <th>userPassword</th>
+  </tr>
+  <tr>
+    <td>{{user.userId}}</td>
+    <td><input type="text" [(ngModel)]="user.userName" name="userName" ></td>
+    <td><input type="text" [(ngModel)]="user.userPassword" name="userName" ></td>
+    <td>
+      <!-- <button type="button" class="btn btn-danger" (click)=deleteUser(infor.id)>Delete</button> -->
+      <button type="button" class="btn btn-danger" (click)="updateData()">update</button>
+    </td>
+  </tr>
+</table>

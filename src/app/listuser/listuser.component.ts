@@ -23,8 +23,9 @@ export class ListuserComponent implements OnInit {
     this.router.navigateByUrl('/create')
   }
 
-  updateUser(id){
-    this.router.navigateByUrl('/detail'+id)
+  detailuser(id){
+    debugger
+    this.router.navigateByUrl('/detail/'+id)
   }
 
   getData(){
@@ -35,29 +36,5 @@ export class ListuserComponent implements OnInit {
       window.alert('connection Error')
     })
   }
-
-
-  // idUser:  number;
-
-  // user: any;
-
-  // constructor(public router: Router, private service: UserService, private actRoute: ActivatedRoute) {
-  //   this.idUser = parseInt(this.actRoute.snapshot.params.id);
-  //   this.getdetail(this.idUser);
-  // }
-
-  // ngOnInit(): void {
-
-  // }
-  // getdetail(id){
-  //   debugger
-  //   this.service.detailData(id)
-  //   .then(res => {
-  //     this.user = res;
-  //   }).catch(e =>{
-  //     window.alert('connection Error')
-  //   })
-  // }
-
 
 }

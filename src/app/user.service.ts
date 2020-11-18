@@ -36,8 +36,9 @@ export class UserService {
   }
 
   detailData = (id): Promise<Object> =>{
+    debugger
     return new Promise((resolve, reject) => {
-      let url = `http://localhost:8080/users?id=${id}`;
+      let url = `http://localhost:8080/detail?id=${id}`;
       this.httpClinet.get(url)
       .subscribe(res =>{
         resolve(res);
@@ -46,5 +47,18 @@ export class UserService {
       })
     })
   }
+
+  updateData = (id,user): Promise<Object> => {
+    return new Promise((resolve, reject) => {
+        let url = `http://localhost:8080/users?id=${id}`;
+        this.httpClinet.put(url,user)
+            .subscribe(res => {
+                alert('update thành công')
+                resolve(res);
+            }, err => {
+                reject(err);
+            })
+    })
+}
 
 }

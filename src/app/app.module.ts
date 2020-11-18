@@ -8,6 +8,7 @@ import { ListuserComponent } from './listuser/listuser.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CreatuserComponent } from './creatuser/creatuser.component';
+import { DetailuserComponent } from './detailuser/detailuser.component';
 
 
 
@@ -16,7 +17,7 @@ import { CreatuserComponent } from './creatuser/creatuser.component';
     AppComponent,
     ListuserComponent,
     CreatuserComponent,
-
+    DetailuserComponent,
   ],
   imports: [
     BrowserModule,
